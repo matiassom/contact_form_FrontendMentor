@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Contact form</title>
+  <script src="./scripts/contactUs.js" defer></script>
 </head>
 <body>
 <main>
@@ -64,9 +65,15 @@
 
  
   <div class="submit-container">
-    <input type="submit" value="Submit" id="submit">
-    <span class="form-success">Message Sent!</span>
-    <span class="form-success">Thanks for completing the form. We'll be in touch soon!</span>
+    <input type="button" value="Submit" id="submit" onclick="contactUs()">
+  </div>
+
+  <div class="form-success">
+    <div id="msgsent">
+      <img src="../assets/images/icon-success-check.svg">
+      <span>Message Sent!</span>
+    </div>
+    <span id="msgcontent">Thanks for completing the form. We'll be in touch soon!</span>
   </div>
   
  
@@ -75,5 +82,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Matias Som</a>.
   </footer>
+
+
 </body>
 </html>
