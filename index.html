@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+<main>
+  <h1>Contact Us</h1>
+  <div class="form-row">
+      <div class="form-group">
+        <label for="first-name">First Name *</label>
+        <input type="text" name="name" id="first-name" maxlength="20">
+        <span class="error-msg" id="first-name-err">This field is required.</span>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name *</label>
+        <input type="text" name="name" id="last-name" maxlenght="20">
+        <span class="error-msg" id="last-name-err">This field is required.</span> 
+      </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group">
+      <label for="email-address">Email Address *</label>
+      <input type="email" id="email-address" maxlength="40">
+      <span class="error-msg" id="email-err">Please enter a valid email address.
+        This field is required.</span> 
+    </div>
+  </div>
+
+  
+  <fieldset class="query-container">
+    <legend>Query Type *</legend>
+  
+    <div class="query-options">
+      <div class="radio-card">
+        <input type="radio" name="query-type" id="general" value="general"> 
+        <label for="general">General Enquiry</label>
+      </div>
+      <div class="radio-card">
+        <input type="radio" name="query-type" id="support" value="support">
+        <label for="support">Support Request</label>
+      </div>
+    </div>
+
+    <span class="error-msg" id="query-err">Please select a query type.</span>
+    </fieldset>
+    
+    <div class="textarea-msg">
+      <label for="message-box">Message *</label>
+      <textarea id="message-box" maxlength="400"></textarea>
+      <span class="error-msg" id="textarea-err">This field is required.</span>
+    </div>
+    
+    <div class="agreecheck-container" id="agree-check">
+      <input type="checkbox" id="agree">
+      <label for="agree">I consent to being contacted by the team. *</label>
+      <span class="error-msg" id="agree-err">To submit this form, please consent to being contacted.</span>
+    </div>
+
+ 
+  <div class="submit-container">
+    <input type="submit" value="Submit" id="submit">
+    <span class="form-success">Message Sent!</span>
+    <span class="form-success">Thanks for completing the form. We'll be in touch soon!</span>
+  </div>
+  
+ 
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Matias Som</a>.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@import url('hhttps://fonts.google.com/specimen/Karla');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    /* Variables para los pesos (Weights) */
+    --fw-normal: 400;
+    --fw-bold: 700;
+    
+    /* Variable de fuente */
+    --ff-karla: 'Karla', sans-serif;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    margin:0;
+    width: 100vw;
+    min-height: 100vh;
+    background:  hsl(148, 38%, 91%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--ff-karla);
+    font-weight: var(--fw-normal); /* Peso por defecto */
+    /* ... tus otros estilos de centrado ... */
+
+    color: hsl(187, 24%, 22%);
+    font-size: 16px;
+}
+
+main{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 500px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+}
+
+h1{
+    font-weight: var(--fw-bold);
+}
+
+input[type="text"], input[type="email"]{
+    padding:0.5rem;
+}
+
+input[type="text"]:hover, input[type="email"]:hover{
+    border:2px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+   outline-color:  hsl(186, 15%, 59%);
+   
+    
+}
+
+
+.form-row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#first-name{
+    margin-right: 1rem;
+}
+
+fieldset{
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.query-options{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.query-container{
+    margin-bottom: 1rem;
+}
+
+.radio-card{
+    width: 48%;
+    border: 1px solid hsl(187, 24%, 22%);
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+}
+
+input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+    margin-left: 0.5rem;
+    width: 20px;
+    height: 20px;
+    border: 1px solid  hsl(187, 24%, 22%);
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0; /* Oculta la imagen cuando NO está seleccionado */
+    transition: all 0.2s; /* Animación suave */
+}
+
+input[type="radio"]:checked{
+    appearance: none;
+    background-image: url("../assets/images/icon-radio-selected.svg");
+    border-color: transparent; /* O el color que prefieras */
+    
+   
+    background-size: 100%; /* Ahora sí mostramos la imagen */
+}
+
+.radio-card:has(input:checked) {
+    background-color: hsl(148, 38%, 91%);
+    border: 1px solid hsl(169, 82%, 27%); 
+}
+
+.error-msg{
+    color:red;
+    font-size: smaller;
+    display: none;
+}
+
+
+
+label,legend{
+    margin-bottom: .5rem;
+}
+
+.textarea-msg{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#message-box{
+    height: 4rem;
+}
+
+.agreecheck-container{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#submit{
+    background-color: hsl(169, 82%, 27%);
+    border-radius: 5px;
+    color: white;
+    font-size: var(--fw-bold);
+    border: none;  
+    width: 100%;
+    height: 40px;         
+
+}
+
+.form-success{
+    display:none;
+}
