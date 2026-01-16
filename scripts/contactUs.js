@@ -51,6 +51,18 @@ function contactUs(){
     //Query type
 
     //Message
+    const message= document.getElementById("message-box");
+    const messageErr= document.getElementById("textarea-err");
+    
+    if(message.value === ""){
+        messageErr.classList.add("visible");
+        message.className = "redBorder";
+        messageCheck= false;
+    } else {
+        messageErr.classList.remove("visible");
+        message.className = "";
+        messageCheck= true;
+    }
 
     //Agree check
     const check = document.getElementById("agree");

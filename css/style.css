@@ -179,7 +179,7 @@ label,legend{
 
 .agreecheck-container{
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -212,6 +212,14 @@ label,legend{
     margin-left: .5rem;
     margin-top: 10px;
 }
+
+#divCheckbox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    margin-bottom: 1.5rem;
+}  
 
 #submit{
     background-color: hsl(169, 82%, 27%);
