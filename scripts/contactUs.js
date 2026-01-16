@@ -21,7 +21,7 @@ function contactUs(){
         lastName.className = "redBorder";
     } else {
         lastName_err.classList.remove("visible");
-        lastName.className = "";
+        lastName.className = ""
     }
 
     //email
@@ -40,8 +40,10 @@ function contactUs(){
 
 
 
-
+//Submit
 const mensajeExito = document.querySelector(".form-success");
+    
+    
     mensajeExito.classList.add("visible");
     
 
