@@ -109,17 +109,18 @@ fieldset{
     cursor: pointer;
     padding-top:0.5rem;
     padding-bottom:0.5rem;
+    user-select: none;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 }
 
 .radio-card label{
     margin:0;
     margin-top: 5px;
     margin-left: .5rem;
+    cursor: pointer;
 }
 
 input[type="radio"]{
@@ -234,6 +235,10 @@ label,legend{
 
 .form-success{
     display: none;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease, visibility 2s;
 }
 
 .form-success.visible{
@@ -249,6 +254,9 @@ label,legend{
     color: white;
     background-color:  hsl(187, 24%, 22%);
     border-radius: 10px;
+
+    opacity: 1;
+    visibility: visible;
 }
 
 #msgsent{

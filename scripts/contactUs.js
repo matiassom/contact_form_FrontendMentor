@@ -1,4 +1,10 @@
 function contactUs(){
+    let firstNameCheck= false;
+    let lastNameCheck= false;
+    let emailCheck= false;
+    let queryCheck= false;
+    let messageCheck= false;
+    let agreeLineCheck= false
     
     //first-name
     const nombre= document.getElementById("first-name");
@@ -7,9 +13,11 @@ function contactUs(){
     if(nombre.value === ""){
         nombre_err.classList.add("visible");
         nombre.className = "redBorder";
+        firstNameCheck = false;
     } else {
         nombre_err.classList.remove("visible");
         nombre.className = "";
+        firstNameCheck = true;
     }
     
     //last-name
@@ -19,9 +27,11 @@ function contactUs(){
     if(lastName.value === ""){
         lastName_err.classList.add("visible");
         lastName.className = "redBorder";
+        lastNameCheck = false;
     } else {
         lastName_err.classList.remove("visible");
         lastName.className = ""
+        lastNameCheck = true;
     }
 
     //email
@@ -31,9 +41,30 @@ function contactUs(){
     if(emailAddress.value === ""){
         emailErr.classList.add("visible");
         emailAddress.className = "redBorder";
+        emailCheck= false;
     } else {
         emailErr.classList.remove("visible");
         emailAddress.className = "";
+        emailCheck= true;
+    }
+
+    //Query type
+
+    //Message
+
+    //Agree check
+    const check = document.getElementById("agree");
+    const checkErr = document.getElementById("agree-err");
+
+    if(check.checked){
+        checkErr.classList.remove("visible");
+       
+        agreeLineCheck = true;
+    } else {
+        checkErr.classList.add("visible");
+        
+        checkErr= false;
+        agreeLineCheck = false;            
     }
 
 
@@ -43,11 +74,14 @@ function contactUs(){
 //Submit
 const mensajeExito = document.querySelector(".form-success");
     
-    
-    mensajeExito.classList.add("visible");
+if(firstNameCheck == true && lastNameCheck == true && emailCheck == true){
+      mensajeExito.classList.add("visible");
     
 
     setTimeout(() => {
         mensajeExito.classList.remove("visible");
     }, 3000);
+}
+
+  
 }
