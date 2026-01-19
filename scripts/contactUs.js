@@ -49,10 +49,27 @@ function contactUs(){
     }
 
     //Query type
+    const general= document.getElementById("general");
+    const support= document.getElementById("support");
+    const radioCard= document.getElementById("radio-card");
+    const queryErr= document.getElementById("query-err");
+    
+
+    if(general.checked  === true || support.checked === true ){
+        queryErr.classList.remove("visible");
+        radioCard.className = "";
+        queryCheck= true;
+    } else {
+        queryErr.classList.add("visible");
+        radioCard.className = "redBorder";
+        queryCheck= false;
+    }
 
     //Message
     const message= document.getElementById("message-box");
     const messageErr= document.getElementById("textarea-err");
+
+    console.log("message:"+ message.value);
     
     if(message.value === ""){
         messageErr.classList.add("visible");
@@ -86,7 +103,13 @@ function contactUs(){
 //Submit
 const mensajeExito = document.querySelector(".form-success");
     
-if(firstNameCheck == true && lastNameCheck == true && emailCheck == true){
+if(firstNameCheck == true && 
+    lastNameCheck == true && 
+    emailCheck == true && 
+    messageCheck  == true 
+    && queryCheck== true
+)
+    {
       mensajeExito.classList.add("visible");
     
 
