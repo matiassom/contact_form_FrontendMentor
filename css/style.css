@@ -249,9 +249,10 @@ label,legend{
 }
 
 .form-success.visible{
-    position:absolute;
+    position:fixed;
     top:10px;
     left: 50%;
+    min-width: 200px;
     transform: translateX(-50%);
     padding: 2rem;
     display: flex;
@@ -293,4 +294,44 @@ label,legend{
 .redBorder{
     border-color: red;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+ 
+main{
+    width: 90vw;
+}
+
+.form-row{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+    margin-bottom: 1rem;
+}
+
+#first-name{
+    margin-right: 0rem;
+}
+
+.query-options{
+    display: flex;
+    flex-direction: column;    
+}
+
+.radio-card{
+    width: 100%;    
+}
+
+.form-success.visible{
+}
+    
 }

@@ -69,7 +69,6 @@ function contactUs(){
     const message= document.getElementById("message-box");
     const messageErr= document.getElementById("textarea-err");
 
-    console.log("message:"+ message.value);
     
     if(message.value === ""){
         messageErr.classList.add("visible");
@@ -82,8 +81,8 @@ function contactUs(){
     }
 
     //Agree check
-    const check = document.getElementById("agree");
-    const checkErr = document.getElementById("agree-err");
+    let check = document.getElementById("agree");
+    let checkErr = document.getElementById("agree-err");
 
     if(check.checked){
         checkErr.classList.remove("visible");
