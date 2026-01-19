@@ -51,17 +51,17 @@ function contactUs(){
     //Query type
     const general= document.getElementById("general");
     const support= document.getElementById("support");
-    const radioCard= document.getElementById("radio-card");
+    const radioCard= document.querySelectorAll(".radio-card");
     const queryErr= document.getElementById("query-err");
     
 
     if(general.checked  === true || support.checked === true ){
         queryErr.classList.remove("visible");
-        radioCard.className = "";
+        radioCard.forEach(card => card.classList.remove("redBorder"));   
         queryCheck= true;
     } else {
         queryErr.classList.add("visible");
-        radioCard.className = "redBorder";
+        radioCard.forEach(card => card.classList.add("redBorder"));
         queryCheck= false;
     }
 
@@ -110,6 +110,14 @@ if(firstNameCheck == true &&
     && queryCheck== true
 )
     {
+      nombre.value="";
+      lastName.value="";
+      emailAddress.value="";
+      general.checked=false;
+      support.checked=false;
+      message.value="";
+      check.checked=false;
+
       mensajeExito.classList.add("visible");
     
 
