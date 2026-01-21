@@ -106,7 +106,8 @@ if(firstNameCheck == true &&
     lastNameCheck == true && 
     emailCheck == true && 
     messageCheck  == true 
-    && queryCheck== true
+    && queryCheck== true &&
+    agreeLineCheck == true
 )
     {
       nombre.value="";
